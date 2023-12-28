@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Files</title>
+        <link rel="stylesheet" href="static\contact.css">
+    </head>
+    <body>
+        <h1>Download Attendance</h1>
+        <hr>
+        <a href="/files"></a>
+        <ul>
+            {% for file in files %}
+            <li><a href="{{ url_for('download', filename=file) }}">{{ file }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
